@@ -1,0 +1,38 @@
+<a href="/">Homepage</a>
+<form method="POST" action="/auth/signup">
+
+  <div class="field">
+    <label>Barname</label>
+    <input type="text" name="barname" />
+  </div>
+
+  <div class="field">
+    <label>Password</label>
+    <input type="password" name="password" />
+  </div>
+
+  <div class="field">
+    <label>Longitude</label>
+    <input type="text" name="lng" />
+    <label>Latitude</label>
+    <input type="text" name="lat" />
+
+  </div>
+
+  <div class="field">
+    <label>Phone number</label>
+    <input type="number" name="phone" />
+  </div>
+
+  {{#if errorMessage}}
+
+  <div class="error">
+    {{errorMessage}}
+  </div>
+
+  {{/if}}
+
+  <div class="field submit">
+    <button type="submit">Sign-up</button>
+  </div>
+</form>
