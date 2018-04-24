@@ -52,7 +52,8 @@ router.post('/signup', (req, res, next) => {
           res.redirect('/');
         })
         .catch(next);
-    });
+    })
+    .catch(next);
 });
 
 /* GET log-in page */
@@ -74,6 +75,7 @@ router.post('/login', (req, res, next) => {
     return;
   }
 
+  // TODO:- Promise instead callback
   Bar.findOne({barname: barname}, (err, bar) => {
     if (err || !bar) {
       res.render('auth/login', {

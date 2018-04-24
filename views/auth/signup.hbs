@@ -1,38 +1,77 @@
-<a href="/">Homepage</a>
-<form method="POST" action="/auth/signup">
+<div class="col-md-12">
+  <table class='table table-hover table-responsive table-bordered'>
 
-  <div class="field">
-    <label>Barname</label>
-    <input type="text" name="barname" />
+    <form method="POST" action="/auth/signup">
+      <tr>
+        <td>
+          <div class="field">
+            <label>Barname</label>
+            <td>
+              <input type="text" name="barname" />
+            </td>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="field">
+            <label>Password</label>
+            <td>
+              <input type="password" name="password" />
+            </td>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="field">
+            <label>Longitude</label>
+            <td>
+              <input type="text" name="lng" />
+            </td>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="field">
+            <label>Latitude</label>
+            <td>
+              <input type="text" name="lat" />
+            </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="field">
+            <label>Phone number</label>
+            <td>
+              <input type="number" name="phone" />
+            </td>
+          </div>
+        </td>
+      </tr>
+
+      {{#if errorMessage}}
+
+      <div class="error">
+        {{errorMessage}}
+      </div>
+
+      {{/if}}
+      <td>
+        <div class="field submit">
+          <td>
+            <button type="submit" class="btn btn-primary">
+              <span class="glyphicon glyphicon"></span>Sign-up
+            </button>
+          </td>
+        </div>
+      </td>
+    </form>
+
+  </table>
   </div>
-
-  <div class="field">
-    <label>Password</label>
-    <input type="password" name="password" />
-  </div>
-
-  <div class="field">
-    <label>Longitude</label>
-    <input type="text" name="lng" />
-    <label>Latitude</label>
-    <input type="text" name="lat" />
-
-  </div>
-
-  <div class="field">
-    <label>Phone number</label>
-    <input type="number" name="phone" />
-  </div>
-
-  {{#if errorMessage}}
-
-  <div class="error">
-    {{errorMessage}}
-  </div>
-
-  {{/if}}
-
-  <div class="field submit">
-    <button type="submit">Sign-up</button>
-  </div>
-</form>
