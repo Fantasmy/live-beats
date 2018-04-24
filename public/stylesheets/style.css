@@ -80,3 +80,7 @@ color: #4FCECC!important;
 .lennie{
   clear: both;
 }
+
+ul {
+  list-style-position: none;
+}
