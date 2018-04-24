@@ -40,6 +40,9 @@
         
         {{#if user}}
         <li>
+          <a class="header-barname">{{user.barname}}</a>
+        </li>
+        <li>
           <a href="/">
             <form method="POST" action="/auth/logout">
               <span class="glyphicon glyphicon-log-out"></span> Logout</form>

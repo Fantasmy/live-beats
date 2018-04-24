@@ -14,13 +14,14 @@ router.use((req, res, next) => {
   }
 });
 
+// ################################# GET-POST #################################//
+
 /* GET create event page. */
 router.get('/create', function (req, res, next) {
   res.render('pages/create-event');
 });
 
-/* POST / SAVE event */
-
+/* POST create movie in a database */
 router.post('/create', (req, res, next) => {
   const title = req.body.title;
   const musicType = req.body.musicType;
@@ -70,8 +71,9 @@ router.get('/event-details/:eventId', (req, res, next) => {
       const data = {
         event: result
       };
-      res.render('event-details', data);
+      res.render('pages/event-details', data);
     })
     .catch(next);
 });
+
 module.exports = router;

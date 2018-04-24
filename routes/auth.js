@@ -49,7 +49,7 @@ router.post('/signup', (req, res, next) => {
 
       bar.save()
         .then(() => {
-          res.render('auth/signup');
+          res.redirect('/');
         })
         .catch(next);
     });
