@@ -2,6 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
 
 const Event = require('../models/event');
 
@@ -49,10 +50,28 @@ router.post('/create', (req, res, next) => {
 
       event.save()
         .then(() => {
-          res.render('pages/event-details');
+          res.redirect(`event-details/${event._id}`);
         })
         .catch(next);
     });
 });
 
+/* GET event details */
+router.get('/event-details/:eventId', (req, res, next) => {
+  // validate mongo ID and send 404 if invalid
+  if (!mongoose.Types.ObjectId.isValid(req.params.eventId)) {
+    res.status(404);
+    res.render('not-found');
+    return;
+  }
+  // else
+  Event.findOne({ _id: req.params.eventId })
+    .then((result) => {
+      const data = {
+        event: result
+      };
+      res.render('event-details', data);
+    })
+    .catch(next);
+});
 module.exports = router;

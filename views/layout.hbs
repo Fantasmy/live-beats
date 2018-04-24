@@ -3,14 +3,58 @@
 
 <head>
   <title>liveBeats!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
+
 <header>
-  <div class="container">
-    <h1>liveBeats</h1>
-  </div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Live Beats!</a>
+      </div>
+
+      <ul class="nav navbar-nav">
+
+        <li class="active">
+          <a href="/">Home</a>
+        </li>
+
+        <li>
+          <a href="#">Events</a>
+        </li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        {{#unless user}}
+        <li>
+          <a href="/auth/signup">
+            <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+        </li>
+        <li>
+          <a href="/auth/login">
+            <span class="glyphicon glyphicon-log-in"></span> Login</a>
+        </li>
+        {{/unless}} 
+        
+        {{#if user}}
+        <li>
+          <a href="/">
+            <form method="POST" action="/auth/logout">
+              <span class="glyphicon glyphicon-log-out"></span> Logout</form>
+          </a>
+        </li>
+        {{/if}}
+        
+      </ul>
+
+    </div>
+  </nav>
 </header>
+
 <div clas="container">
+
   <body>
     {{{body}}}
   </body>

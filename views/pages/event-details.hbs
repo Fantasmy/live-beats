@@ -1,5 +1,27 @@
+
+
+
+<body class="events-page">
 <div>
   <h1>Event details</h1>
 </div>
+ <h1> {{event.title}}</h1>
+ <div class="events-listing">
+   <ul>
+     <div class="each-event">
+       <li>
+         <a href="/">Back</a>
+         <p><b>Title:</b> {{event.title}}</p>
+         <p><b>Type of music:</b> {{event.musicType}}</p>
+         <p><b>Description:</b> {{event.description}}</p>
+         {{!-- <form method="POST" action="/events/{{event._id}}/delete">
+           <button class="button">Delete</button>
+         </form> --}}
+         
+       </li>
+     </div>
+   </ul>
+ </div>
 
-<div><h2>Bar info</h2></div>
+ <div><h2>Bar info</h2></div>
+</body>
