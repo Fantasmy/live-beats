@@ -10,12 +10,14 @@
 <header>
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
+      
+      {{!--  logo --}}
       <div class="navbar-header">
         <a class="navbar-brand" href="/">Live Beats!</a>
       </div>
 
+      {{!--   links --}}
       <ul class="nav navbar-nav">
-
         <li class="active">
           <a href="/">Home</a>
         </li>
@@ -23,9 +25,9 @@
         <li>
           <a href="/event/list">Events</a>
         </li>
-
       </ul>
 
+     {{!-- signup/login --}}
       <ul class="nav navbar-nav navbar-right">
         {{#unless user}}
         <li>
@@ -37,7 +39,8 @@
             <span class="glyphicon glyphicon-log-in"></span> Login</a>
         </li>
         {{/unless}} 
-        
+
+     {{!--  name/logout   --}}
         {{#if user}}
         <li>
           <a class="header-barname">{{user.barname}}</a>
@@ -48,14 +51,47 @@
               <span class="glyphicon glyphicon-log-out"></span> Logout</form>
           </a>
         </li>
-        {{/if}}
-        
+        {{/if}}  
       </ul>
-
     </div>
   </nav>
 </header>
 
+
+{{!-- <header>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#about">ABOUT</a>
+        </li>
+        <li>
+          <a href="#services">SERVICES</a>
+        </li>
+        <li>
+          <a href="#portfolio">PORTFOLIO</a>
+        </li>
+        <li>
+          <a href="#pricing">PRICING</a>
+        </li>
+        <li>
+          <a href="#contact">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+ --}}
 <div clas="container">
 
   <body>
@@ -63,8 +99,9 @@
   </body>
 </div>
 
-<footer>
-  &copy Marketa & Jenny
+<footer class="container-fluid footer text-center">
+  <p>  &copy Marketa & Jenny </p>
 </footer>
+
 
 </html>

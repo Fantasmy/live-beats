@@ -1,17 +1,24 @@
-<h1>Welcome to liveBeats!</h1>
+<div class="jumbotron text-center">
+  <div class="jumbotron-text">
 
-<div id="container">
-  {{#if user}} 
-    <p> {{user.username}} </p>
-      <form method="POST" action="/auth/logout">
-        <button>Logout</button>
-      </form>
-  {{/if}}
+    <h1>Hey</h1>
+    <p>Here put some cool text</p>
   
+    <div id="container">
       {{#unless user}}
       <a href="/auth/login">Log in</a>
       <a href="/auth/signup">Sign-up</a>
       {{/unless}}
+    
+    <button type="button" class="btn btn-info btn-lg">
+      <a href="/event/create">Create event</a>
+    </button>
 
-<a href="/event/create">Create event</a>
+    </div>
+  </div>
+</div>
+
+<div>
+  <h2> HERE GOES THE MAP</h2>
+</div>
 </div>
