@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cute+Font');
+@import url('https://fonts.googleapis.com/css?family=Cute+Font|Damion|Jua');
 
 /* ---- reset ---- */
 
@@ -66,6 +66,18 @@ color: #4FCECC!important;
   margin: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-family: 'Jua', sans-serif;
+  color: wheat!important;
+  text-shadow: 2px 2px black;
+  padding-left: 80px;
+}
+
+.jumbotron-text h1{
+  font-size: 70px;
+}
+
+.capital{
+  font-size: 90px;
 }
 
 .container-fluid {
