@@ -21,7 +21,7 @@ router.get('/create', function (req, res, next) {
   res.render('pages/create-event');
 });
 
-/* POST create movie in a database */
+/* POST create event in a database */
 router.post('/create', (req, res, next) => {
   const title = req.body.title;
   const musicType = req.body.musicType;

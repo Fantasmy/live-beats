@@ -1,38 +1,68 @@
-<a href="/">Homepage</a>
 <h1>Create event</h1>
 
-<form method="POST" action="/event/create">
+<div class="col-md-12">
+  <table class='table table-hover table-responsive table-bordered'>
 
-  <div class="field">
-    <label>Event name</label>
-    <input type="text" name="title" />
-  </div>
+    <form method="POST" action="/event/create">
+      <tr>
+        <td>
+          <div class="field">
+            <label>Event name</label>
+            <td>
+              <input type="text" name="title" />
+            </td>
+          </div>
+        </td>
+      </tr>
 
-  <div class="field">
-    <label>Type of music</label>
-    <input type="radio" name="musicType" value="classic"> Classic</input>
-    <input type="radio" name="musicType" value="jazz"> Jazz</input>
-    <input type="radio" name="musicType" value="pop"> Pop</input>
-    <input type="radio" name="musicType" value="rap"> Rap</input>
-    <input type="radio" name="musicType" value="rock"> Rock</input>
-    <input type="radio" name="musicType" value="other"> Other</input>
+      <tr>
+        <td>
+          <div class="field">
+            <label>Type of music</label>
+            <td>
+              <select name='musicType' class='form-control'>
+                <option value='classic'>Classic</option>
+                <option value='jazz'>Jazz</option>
+                <option value='pop'>Pop</option>
+                <option value='rap'>Rap</option>
+                <option value='rock'>Rock</option>
+                <option value='other'>Other</option>
+              </select>
+            </td>
+          </div>
+        </td>
+      </tr>
 
-  </div>
+      <tr>
+        <td>
+          <div class="field">
+            <label>Description</label>
+            <td>
+              <textarea type="text" name="description"></textarea> </textarea>
+            </td>
+          </div>
+        </td>
+      </tr>
 
-  <div class="field">
-    <label>Description</label>
-    <input type="text" name="description" />
-  </div>
+      {{#if errorMessage}}
 
-{{#if errorMessage}}
+      <div class="error">
+        {{errorMessage}}
+      </div>
 
-  <div class="error">
-    {{errorMessage}}
-  </div>
+      {{/if}}
 
-  {{/if}}
+      <td>
+        <div class="field submit">
+          <td>
+            <button type="submit" class="btn btn-primary">
+              <span class="glyphicon glyphicon"></span>Add event
+            </button>
+          </td>
+        </div>
+      </td>
+    </form>
 
-  <div class="field submit">
-    <button type="submit">Add event</button>
-  </div>
-</form>
+
+  </table>
+</div>
