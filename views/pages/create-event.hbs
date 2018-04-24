@@ -1,22 +1,36 @@
 <a href="/">Homepage</a>
 <h1>Create event</h1>
 
-<form method="POST" action="/movies">
+<form method="POST" action="/event/create">
 
-  <div class="field" >
+  <div class="field">
     <label>Event name</label>
-    <input type="text" name="name"/>
+    <input type="text" name="title" />
   </div>
 
-  <div class="field" >
-    <label>Type</label>
-    <input type="number" name="year"/>
+  <div class="field">
+    <label>Type of music</label>
+    <input type="radio" name="musicType" value="classic"> Classic</input>
+    <input type="radio" name="musicType" value="jazz"> Jazz</input>
+    <input type="radio" name="musicType" value="pop"> Pop</input>
+    <input type="radio" name="musicType" value="rap"> Rap</input>
+    <input type="radio" name="musicType" value="rock"> Rock</input>
+    <input type="radio" name="musicType" value="other"> Other</input>
+
   </div>
 
-  <div class="field" >
+  <div class="field">
     <label>Description</label>
-    <input type="text" name="description"/>
+    <input type="text" name="description" />
   </div>
+
+{{#if errorMessage}}
+
+  <div class="error">
+    {{errorMessage}}
+  </div>
+
+  {{/if}}
 
   <div class="field submit">
     <button type="submit">Add event</button>

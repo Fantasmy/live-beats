@@ -92,4 +92,11 @@ router.post('/login', (req, res, next) => {
   });
 });
 
+/* POST logout */
+
+router.post('/logout', (req, res, next) => {
+  req.session.currentUser = null; // delete req.session.user
+  res.redirect('/');
+});
+
 module.exports = router;
