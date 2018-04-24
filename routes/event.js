@@ -76,4 +76,16 @@ router.get('/event-details/:eventId', (req, res, next) => {
     .catch(next);
 });
 
+/* GET events page */
+
+router.get('/list', (req, res, next) => {
+  Event.find({})
+    .then((result) => {
+      const data = {
+        events: result
+      };
+      res.render('pages/events', data);
+    });
+});
+
 module.exports = router;
