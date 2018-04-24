@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cute+Font|Damion|Jua');
+@import url('https://fonts.googleapis.com/css?family=Cute+Font|Roboto|Jua');
 
 /* ---- reset ---- */
 
@@ -35,6 +35,7 @@ body {
   margin: 0;
   border-radius: 0%;
   font-size:1.3em;
+  background-color: black;
 }
 
 .header-barname{
@@ -55,29 +56,37 @@ color: #4FCECC!important;
 /* --- homepage --- */ 
 
 .jumbotron { 
-    background: url("../images/background.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-    color: black;
-    margin: 0;
+  background: url("../images/background.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  color: black;
+  margin: 0;
 }
 
 .jumbotron-text{
   margin: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 80px;
   font-family: 'Jua', sans-serif;
   color: wheat!important;
   text-shadow: 2px 2px black;
-  padding-left: 80px;
+  display: inline-block;
+  text-align: center;
 }
 
 .jumbotron-text h1{
   font-size: 70px;
+  margin-bottom: 40px;
 }
 
 .capital{
   font-size: 90px;
+}
+
+.jumbotron-text h3{
+  font-size: 30px;
+  margin-bottom: 40px;
 }
 
 .container-fluid {
@@ -87,6 +96,16 @@ color: #4FCECC!important;
 
 .btn-info{
   background-color: #4FCECC;
+  padding: 20px;
+  font-size: 20px;
+}
+.btn-info a{
+color: black;
+}
+
+.btn-info a:hover{
+text-decoration: none;
+color: wheat;
 }
 
 .lennie{
