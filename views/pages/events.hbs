@@ -1,25 +1,26 @@
 <body class="events-page">
   <h1> List of Events </h1>
- <div class="events-listing">
-   <ul>
-     {{#each events}} {{!-- key from event.js --}}
-     
-     <div class="each-event">
-     <li>
-       {{!--
-       <p>{{this.image}}</p> --}}
-       <p>
-         <b>Title:</b> {{this.title}}</p>
-       <p>
-         <b>Type of music:</b> {{this.musicType}}</p>
-       <p>
-         <b>Description:</b> {{this.description}}</p>
-       <a href="/event/event-details/{{this._id}}">See details</a>
-     </li>
-     </div>
+  <div class="events-listing">
+    <ul>
+      {{#each events}} {{!-- key from event.js --}}
 
-     {{/each}}
-   </ul>
+      <div class="each-event">
+        <li>
+          {{!--
+          <p>{{this.image}}</p> --}}
+          <p>
+            <b>Title:</b> {{this.title}}</p>
+          <p>
+            <b>Type of music:</b> {{this.musicType}}</p>
+          <p>
+            <b>Description:</b> {{this.description}}</p>
+          <a href="/event/event-details/{{this._id}}">See details</a>
+        </li>
+      </div>
 
- </div>
+      {{/each}}
+    </ul>
+
+  </div>
 </body>
+<div class="lennie"></div>

@@ -1,49 +1,62 @@
 <div class="col-md-12">
   <table class='table table-hover table-responsive table-bordered'>
 
+    <a href="/">Back</a>
 
     <body class="events-page">
-      <tr>
-        <td>
-          <div>
-            <h1>Event details</h1>
-          </div>
-        </td>
-      </tr>
-
-      <h1> {{event.title}}</h1>
+      
+            <h1>Event details: </h1>
+            
       <div class="events-listing">
         <ul>
+          <div class="each-event">
+              <tr>
+                <td>
+                  <b>Title:</b>
 
-          <tr>
-            <td>
-              <div class="each-event">
-                <li>
-                  <a href="/">Back</a>
-                  <p>
-                    <b>Title:</b> {{event.title}}</p>
-                  <p>
-                    <b>Type of music:</b> {{event.musicType}}</p>
-                  <p>
-                    <b>Description:</b> {{event.description}}</p>
-                  {{!--
-                  <form method="POST" action="/events/{{event._id}}/delete">
-                    <button class="button">Delete</button>
-                  </form> --}}
+                </td>
+                <td>
+                  {{event.title}}
+                </td>
+              </tr>
+              </p>
+              <p>
+                <tr>
+                  <td>
+                    <b>Type of music:</b>
+                  </td>
+                  <td>
+                    {{event.musicType}}</td>
+                </tr>
+              </p>
+              <p>
+                <tr>
+                  <td>
+                    <b>Description:</b>
+                  </td>
+                  <td>
+                    {{event.description}}
+                  </td>
+                </tr>
+              </p>
 
-                </li>
-              </div>
-            </td>
+          </div>
+          </td>
           </tr>
 
         </ul>
       </div>
 
-      <div>
-        <h2>Bar info</h2>
-      </div>
+      <tr>
+        <td>
+          <div>
+            <h2>Bar info</h2>
+          </div>
+        </td>
+      </tr>
     </body>
 
 
   </table>
 </div>
+<div class="lennie"></div>
