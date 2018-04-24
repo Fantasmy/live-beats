@@ -1,17 +1,20 @@
 <div class="col-md-12">
   <table class='table table-hover table-responsive table-bordered'>
 
+    <a href="/">Back</a>
 
     <body class="events-page">
       <tr>
         <td>
           <div>
-            <h1>Event details</h1>
+            <h1>Event details: </h1>
+            <td>
+              <h1> {{event.title}}</h1>
+            </td>
           </div>
         </td>
       </tr>
 
-      <h1> {{event.title}}</h1>
       <div class="events-listing">
         <ul>
 
@@ -19,17 +22,36 @@
             <td>
               <div class="each-event">
                 <li>
-                  <a href="/">Back</a>
                   <p>
-                    <b>Title:</b> {{event.title}}</p>
+                    <tr>
+                      <td>
+                        <b>Title:</b>
+
+                      </td>
+                      <td>
+                        {{event.title}}
+                      </td>
+                    </tr>
+                  </p>
                   <p>
-                    <b>Type of music:</b> {{event.musicType}}</p>
+                    <tr>
+                      <td>
+                        <b>Type of music:</b>
+                      </td>
+                      <td>
+                        {{event.musicType}}</td>
+                    </tr>
+                  </p>
                   <p>
-                    <b>Description:</b> {{event.description}}</p>
-                  {{!--
-                  <form method="POST" action="/events/{{event._id}}/delete">
-                    <button class="button">Delete</button>
-                  </form> --}}
+                    <tr>
+                      <td>
+                        <b>Description:</b>
+                      </td>
+                      <td>
+                        {{event.description}}
+                      </td>
+                    </tr>
+                  </p>
 
                 </li>
               </div>
@@ -39,11 +61,16 @@
         </ul>
       </div>
 
-      <div>
-        <h2>Bar info</h2>
-      </div>
+      <tr>
+        <td>
+          <div>
+            <h2>Bar info</h2>
+          </div>
+        </td>
+      </tr>
     </body>
 
 
   </table>
 </div>
+<div class="lennie"></div>
