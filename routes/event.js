@@ -70,8 +70,21 @@ router.get('/event-details/:eventId', (req, res, next) => {
       const data = {
         event: result
       };
-      res.render('event-details', data);
+      res.render('pages/event-details', data);
     })
     .catch(next);
 });
+
+/* GET events page */
+
+router.get('/list', (req, res, next) => {
+  Event.find({})
+    .then((result) => {
+      const data = {
+        events: result
+      };
+      res.render('pages/events', data);
+    });
+});
+
 module.exports = router;
