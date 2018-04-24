@@ -34,6 +34,7 @@ body {
   padding: 0;
   margin: 0;
   border-radius: 0%;
+  font-size:1.3em;
 }
 
 .header-barname{
@@ -74,4 +75,8 @@ color: #4FCECC!important;
 
 .btn-info{
   background-color: #4FCECC;
+}
+
+.lennie{
+  clear: both;
 }
