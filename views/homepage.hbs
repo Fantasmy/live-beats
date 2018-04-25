@@ -19,33 +19,56 @@
 
 <div id="search" class="text-center">
 
-  <h2> Find where you want to land</h2>
+  <h1>Find the good vibes</h1>
   {{!-- form with music values --}}
+
+  <form method="POST" action="/search">
   <tr>
-    <td>
-      <td>
-        <div class="field">
-          <label>Type of music</label>
-          <td>
-            <select name='musicType' class='selectpicker'>
-              <option value='classic'>Classic</option>
-              <option value='jazz'>Jazz</option>
-              <option value='pop'>Pop</option>
-              <option value='rap'>Rap</option>
-              <option value='rock'>Rock</option>
-              <option value='other'>Other</option>
-            </select>
+    <div class="field">
+      <label><h3>Pick your music taste</h3></label>
+        <td>
+          <select name='musicType' class='selectpicker'>
+            <option value='classic'>Classic</option>
+            <option value='jazz'>Jazz</option>
+            <option value='pop'>Pop</option>
+            <option value='rap'>Rap</option>
+            <option value='rock'>Rock</option>
+            <option value='other'>Other</option>
+          </select>
+        </td>
+        <td>
+          <button type="submit" class="btn btn-search">
+            <span class="glyphicon glyphicon"></span>Search
+          </button>
           </td>
-
-          <td>
-            <td>
-              <button type="submit" class="btn btn-primary">
-                <span class="glyphicon glyphicon"></span>Search
-              </button>
-            </td>
-          </td>
+    </div>
   </tr>
+</form>
 
+  <div class="searchList">
+    {{searchList}}
+    
+    <ul>
+      {{#each searchedEvent}} {{!-- key from index.js --}}
+      <div class="each-event">
+        <li>
+          <p>
+            <b>Title:</b> {{this.title}}</p>
+          <p>
+            <b>Type of music:</b> {{this.musicType}}</p>
+          <p>
+            <b>Description:</b> {{this.description}}</p>
+          <a href="/event/event-details/{{this._id}}">See details</a>
+        </li>
+      </div>
+  
+      {{/each}}
+    </ul>
+  
   </div>
 </div>
+  
+
+
+
 <div class="lennie"></div>

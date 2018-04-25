@@ -96,17 +96,4 @@ router.get('/list', (req, res, next) => {
     .catch(next);
 });
 
-/* FIND all events by music type */
-
-router.get('/events', (req, res, next) => {
-  Event.find({musicType: req.params.musicType})
-    .then((result) => {
-      const data = {
-        events: result
-      };
-      res.render('pages/events', data);
-    })
-    .catch(next);
-});
-
 module.exports = router;
