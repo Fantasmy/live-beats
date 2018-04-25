@@ -159,11 +159,14 @@ button {
   width: 100px;
 }
 
+#details {
+  height: 85vh;
+}
 
 /* sign-up form */
 
 #signup-form{
-  height: 100vh;
+  height: 85vh;
   background-color: #d3cdcd;
 }
 
