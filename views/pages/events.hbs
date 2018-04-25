@@ -20,17 +20,18 @@
     </ul>
 
     <div class="col-md-12">
+      <h1>List of Events</h1>
       <table class='table table-hover table-responsive table-bordered'>
-
+{{!-- 
         <thead class="thead-dark">
           <tr>
             <th colspan="4" scope="colgroup">List of Events</th>
           </tr>
-        </thead>
+        </thead> --}}
         <tbody>
           <ul>
             {{#each events}} {{!-- key from event.js --}}
-
+          <thead><tr>            <th colspan="4" scope="colgroup">Event info:</th></tr></thead>
             <div class="each-event">
               <tr>
                 <th scope="row">Title</th>
