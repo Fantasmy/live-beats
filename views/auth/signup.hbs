@@ -1,12 +1,12 @@
 <div class="col-md-12" id="signup-form">
   <div class="form">
     <form method="POST" action="/auth/signup">
-      
+
       <div class="form-group">
         <label>Barname:</label>
         <input type="text" class="form-control" id="barname" name="barname">
       </div>
-      
+
       <div class="form-group">
         <label>Password:</label>
         <input type="password" class="form-control" id="pwd" name="password">
@@ -21,85 +21,11 @@
         <label>Latitude:</label>
         <input type="text" class="form-control" id="lat" name="lat">
       </div>
-      
+
       <div class="form-group">
         <label>Phone number:</label>
         <input type="number" class="form-control" id="phone" name="phone">
       </div>
-
-       {{#if errorMessage}}
-      
-      <div class="error">
-        {{errorMessage}}
-      </div>
-      
-      {{/if}}
-      <div class="text-center">
-      <button type="submit" class="btn btn-signup">
-        <span class="glyphicon glyphicon"></span>Sign-up
-        </button>
-        </div>
-    </form>
-</div>
-</div>
-
-<div class="lennie"></div>
-
-
-{{!-- 
-<table class='table table-hover table-responsive table-bordered'>
-      <tr>
-        <td>
-          <div class="field">
-            <label>Barname</label>
-            <td>
-              <input type="text" name="barname" />
-            </td>
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div class="field">
-            <label>Password</label>
-            <td>
-              <input type="password" name="password" />
-            </td>
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div class="field">
-            <label>Longitude</label>
-            <td>
-              <input type="text" name="lng" />
-            </td>
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div class="field">
-            <label>Latitude</label>
-            <td>
-              <input type="text" name="lat" />
-            </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div class="field">
-            <label>Phone number</label>
-            <td>
-              <input type="number" name="phone" />
-            </td>
-          </div>
-        </td>
-      </tr>
 
       {{#if errorMessage}}
 
@@ -108,18 +34,90 @@
       </div>
 
       {{/if}}
-
-      <td>
-        <div class="field submit">
-          <td>
-            <button type="submit" class="btn btn-primary">
-              <span class="glyphicon glyphicon"></span>Sign-up
-            </button>
-          </td>
-        </div>
-      </td>
+      <div class="text-center">
+        <button type="submit" class="btn btn-signup">
+          <span class="glyphicon glyphicon"></span>Sign-up
+        </button>
+      </div>
     </form>
-  </table>
-  </div> --}}
+  </div>
+</div>
 
-  
+<div class="lennie"></div>
+
+
+{{!--
+<table class='table table-hover table-responsive table-bordered'>
+  <tr>
+    <td>
+      <div class="field">
+        <label>Barname</label>
+        <td>
+          <input type="text" name="barname" />
+        </td>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div class="field">
+        <label>Password</label>
+        <td>
+          <input type="password" name="password" />
+        </td>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div class="field">
+        <label>Longitude</label>
+        <td>
+          <input type="text" name="lng" />
+        </td>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div class="field">
+        <label>Latitude</label>
+        <td>
+          <input type="text" name="lat" />
+        </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div class="field">
+        <label>Phone number</label>
+        <td>
+          <input type="number" name="phone" />
+        </td>
+      </div>
+    </td>
+  </tr>
+
+  {{#if errorMessage}}
+
+  <div class="error">
+    {{errorMessage}}
+  </div>
+
+  {{/if}}
+
+  <td>
+    <div class="field submit">
+      <td>
+        <button type="submit" class="btn btn-primary">
+          <span class="glyphicon glyphicon"></span>Sign-up
+        </button>
+      </td>
+    </div>
+  </td>
+  </form>
+</table>
+</div> --}}
