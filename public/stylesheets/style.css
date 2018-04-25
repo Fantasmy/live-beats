@@ -19,6 +19,15 @@ body {
   clear: both;
 }
 
+.btn a{
+color: black;
+}
+
+.btn:hover a{
+text-decoration: none;
+color: wheat;
+}
+
 .error-message {
   background: orangered;
   box-sizing: border-box;
@@ -117,14 +126,6 @@ button {
   padding: 20px;
   font-size: 20px;
 }
-.btn-info a{
-color: black;
-}
-
-.btn-info:hover a{
-text-decoration: none;
-color: wheat;
-}
 
 #search{
   background-color: black;
@@ -132,12 +133,31 @@ color: wheat;
   height: 50vh;
 }
 
-#search h2{
-  padding-top: 40px;
+#search h1{
+  padding-top: 60px;
   padding-bottom: 40px;
   margin: 0;
+  font-family: 'Jua', sans-serif;
+  color: wheat!important;
 }
 
+.field label{
+  font-family: 'Jua', sans-serif;
+  color: wheat!important;
+  padding-right: 20px;
+}
+
+.selectpicker{
+  color: black;
+  height: 33px;
+  width: 100px;
+}
+
+.btn-search{
+  background-color: #4FCECC;
+  font-family: 'Jua', sans-serif;
+  color: black;
+}
 
 
 /* something from Jenny's form */
