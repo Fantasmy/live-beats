@@ -138,3 +138,15 @@ color: wheat;
 ul {
   list-style-position: none;
 }
+
+.events-listing{
+  display: flex;
+}
+
+.event-info{
+  float:left;
+}
+
+.bar-info{
+  float:left
+}
