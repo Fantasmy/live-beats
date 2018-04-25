@@ -14,11 +14,9 @@ body {
   padding: 0;
 }
 
-button {
-  border: none;
-  background: none;  
+.lennie{
+  clear: both;
 }
-
 
 /* ---- typography ---- */
 
@@ -38,19 +36,29 @@ body {
   background-color: black;
 }
 
+.container-fluid {
+  padding: 10px 20px;
+  margin: 0;
+}
+
 .header-barname{
   color: goldenrod!important;
 }
 
 .navbar-brand {
-font-family: 'Cute Font', cursive;
-font-size: 30px;
-color: #4FCECC!important;
+  font-family: 'Cute Font', cursive;
+  font-size: 30px;
+  color: #4FCECC!important;
+}
+
+button {
+  border: none;
+  background: none;  
 }
 
 .footer { 
-    background-color: #2f2f2f;
-    color: #ffffff;
+  background-color: #2f2f2f;
+  color: #ffffff;
 }
 
 /* --- homepage --- */ 
@@ -89,11 +97,6 @@ color: #4FCECC!important;
   margin-bottom: 40px;
 }
 
-.container-fluid {
-    padding: 10px 20px;
-    margin: 0;
-}
-
 .btn-info{
   background-color: #4FCECC;
   padding: 20px;
@@ -103,14 +106,24 @@ color: #4FCECC!important;
 color: black;
 }
 
-.btn-info a:hover{
+.btn-info:hover a{
 text-decoration: none;
 color: wheat;
 }
 
-.lennie{
-  clear: both;
+#search{
+  background-color: black;
+  color: white;
+  height: 50vh;
 }
+
+#search h2{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
+/* something from Jenny's form */
 
 ul {
   list-style-position: none;

@@ -27,6 +27,7 @@ router.get('/create', function (req, res, next) {
 
 /* POST create event in a database */
 router.post('/create', (req, res, next) => {
+  // check if the user is logged in
   const title = req.body.title;
   const musicType = req.body.musicType;
   const description = req.body.description;
