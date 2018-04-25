@@ -69,30 +69,45 @@
 
   <thead class="thead-dark">
     <tr>
-      <th colspan="4" scope="colgroup">Sizes available</th>
+      <th colspan="4" scope="colgroup">Event details</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">Title</th>
+      <td>{{event.title}}</td>
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <th scope="row">Type of music</th>
+      <td>{{event.musicType}}</td>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <th scope="row">Description</th>
+      <td>{{event.description}}</td>
     </tr>
   </tbody>
 </table>
 
+<table class='table table-hover table-responsive table-bordered'>
+<thead class="thead-dark">
+    <tr>
+      <th colspan="4" scope="colgroup">Bar info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Bar name</th>
+      <td>{{event.bar.barname}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Location</th>
+      <td>{{event.bar.location.coordinates}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Phone</th>
+      <td>{{event.bar.phone}}</td>
+    </tr>
+  </tbody>
+</table>  
 
 <div class="lennie"></div>
