@@ -61,6 +61,11 @@ body {
   color: #4FCECC!important;
 }
 
+.logo {
+  width: 70px;
+  height: 50px;
+}
+
 button {
   border: none;
   background: none;  
@@ -132,6 +137,8 @@ color: wheat;
   padding-bottom: 40px;
   margin: 0;
 }
+
+
 
 /* something from Jenny's form */
 
