@@ -6,19 +6,23 @@ const mongoose = require('mongoose');
 
 const Event = require('../models/event');
 
-router.use((req, res, next) => {
+// ################################# GET-POST #################################//
+
+/* router.use((req, res, next) => {
   if (req.session.currentUser) {
     next();
   } else {
     res.redirect('/auth/login');
   }
-});
-
-// ################################# GET-POST #################################//
+}); */
 
 /* GET create event page. */
 router.get('/create', function (req, res, next) {
-  res.render('pages/create-event');
+  if (req.session.currentUser) {
+    res.render('pages/create-event');
+  } else {
+    res.redirect('/auth/login');
+  }
 });
 
 /* POST create event in a database */
@@ -77,7 +81,6 @@ router.get('/event-details/:eventId', (req, res, next) => {
 });
 
 /* GET events page */
-
 router.get('/list', (req, res, next) => {
   Event.find({})
     .then((result) => {
@@ -85,7 +88,7 @@ router.get('/list', (req, res, next) => {
         events: result
       };
       res.render('pages/events', data);
-    });
+    })
+    .catch(next);
 });
-
 module.exports = router;
