@@ -15,7 +15,7 @@ const eventRouter = require('./routes/event');
 
 // -- connect db
 mongoose.Promise = Promise;
-mongoose.connect(process.env.MONGODB_URI, 'mongodb://<dbuser>:<dbpassword>@ds255309.mlab.com:55309/live-beats' {
+mongoose.connect(process.env.MONGODB_URI, {
   keepAlive: true,
   reconnectTries: Number.MAX_VALUE
 });
