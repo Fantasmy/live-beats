@@ -1,54 +1,43 @@
-<h1>
-
-  Create event</h1>
-
+<h1>Create event</h1>
 <div class="col-md-12">
   <table class='table table-hover table-responsive table-bordered'>
 
     <form method="POST" action="/event/create">
       <tr>
-        <td>
           <div class="field">
-            <label>Event name</label>
-            <td>
-              <input type="text" name="title" />
-            </td>
+            <th scope="row">Event name</th>
+            <td><input type="text" name="title" /></td>
           </div>
-        </td>
       </tr>
 
       <tr>
-        <td>
-          <div class="field">
-            <label>Type of music</label>
-            <td>
-              <select name='musicType' class='form-control'>
-                <option value='classic'>Classic</option>
-                <option value='jazz'>Jazz</option>
-                <option value='pop'>Pop</option>
-                <option value='rap'>Rap</option>
-                <option value='rock'>Rock</option>
-                <option value='other'>Other</option>
-              </select>
-            </td>
-          </div>
-        </td>
+        <div class="field">
+          <th scope="row">Type of music</th>
+          <td>
+            <select name='musicType' class='form-control'>
+              <option value='classic'>Classic</option>
+              <option value='jazz'>Jazz</option>
+              <option value='pop'>Pop</option>
+              <option value='rap'>Rap</option>
+              <option value='rock'>Rock</option>
+              <option value='other'>Other</option>
+            </select>
+          </td>
+        </div>
       </tr>
 
       <tr>
-        <td>
-          <div class="field">
-            <label>Description</label>
-            <td>
-              <textarea type="text" name="description"></textarea> </textarea>
-            </td>
-          </div>
-        </td>
+        <div class="field">
+          <th scope="row">Description</th>
+          <td>
+            <textarea type="text" name="description"></textarea> </textarea>
+          </td>
+        </div>
       </tr>
 
       {{#if errorMessage}}
 
-      <div class="error">
+      <div class="error"> 
         {{errorMessage}}
       </div>
 
@@ -64,7 +53,6 @@
         </div>
       </td>
     </form>
-
 
   </table>
 </div>
