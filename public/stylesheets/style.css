@@ -18,9 +18,15 @@ body {
 .lennie{
   clear: both;
 }
+.btn{
+  background-color: #4FCECC;
+  font-family: 'Jua', sans-serif;
+  color: black;
+}
 
 .btn a{
 color: black;
+
 }
 
 .btn:hover a{
@@ -141,7 +147,7 @@ button {
   color: wheat!important;
 }
 
-.field label{
+#search label{
   font-family: 'Jua', sans-serif;
   color: wheat!important;
   padding-right: 20px;
@@ -153,12 +159,21 @@ button {
   width: 100px;
 }
 
-.btn-search{
-  background-color: #4FCECC;
-  font-family: 'Jua', sans-serif;
-  color: black;
+
+/* sign-up form */
+
+#signup-form{
+  height: 100vh;
+  background-color: #d3cdcd;
 }
 
+.form{
+  margin: 0 auto;
+  padding-top: 50px;
+  width:30%;
+}
 
-/* something from Jenny's form */
-
+.btn-signup{
+  padding: 10px 20px;
+  font-size: 17px;
+}

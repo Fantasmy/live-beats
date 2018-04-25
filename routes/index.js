@@ -18,8 +18,7 @@ router.post('/search', (req, res, next) => {
       const data = {
         searchedEvent: result
       };
-      res.render('homepage', {
-        searchList: data });
+      res.render('homepage', data);
     })
     .catch(next);
 });
