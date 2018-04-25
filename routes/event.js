@@ -27,10 +27,11 @@ router.get('/create', function (req, res, next) {
 
 /* POST create event in a database */
 router.post('/create', (req, res, next) => {
-  // check if the user is logged in
+  /*  if( req.session.currentUser){...} */
   const title = req.body.title;
   const musicType = req.body.musicType;
   const description = req.body.description;
+  const bar = req.session.currentUser._id;
 
   if (title === '' || musicType === '') {
     res.render('pages/create-event', {
@@ -51,7 +52,8 @@ router.post('/create', (req, res, next) => {
       const event = new Event({
         title,
         musicType,
-        description
+        description,
+        bar
       });
 
       event.save()
