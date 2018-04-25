@@ -14,8 +14,18 @@ body {
   padding: 0;
 }
 
+/* Cross-page styling */
 .lennie{
   clear: both;
+}
+
+.error-message {
+  background: orangered;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
 }
 
 /* ---- typography ---- */
