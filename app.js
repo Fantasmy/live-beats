@@ -1,5 +1,6 @@
 'use strict';
 
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -14,7 +15,7 @@ const eventRouter = require('./routes/event');
 
 // -- connect db
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://localhost/liveBeats', {
+mongoose.connect(process.env.MONGODB_URI, 'mongodb://<dbuser>:<dbpassword>@ds255309.mlab.com:55309/live-beats' {
   keepAlive: true,
   reconnectTries: Number.MAX_VALUE
 });
