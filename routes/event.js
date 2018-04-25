@@ -74,6 +74,7 @@ router.get('/event-details/:eventId', (req, res, next) => {
   }
   // else
   Event.findOne({ _id: req.params.eventId })
+    .populate('bar')
     .then((result) => {
       const data = {
         event: result

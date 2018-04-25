@@ -47,13 +47,13 @@
         </ul>
       </div>
 
-      <tr>
-        <td>
+      {{!-- <tr>
+        <td> --}}
           <div>
             <h2>Bar info</h2>
           </div>
-        </td>
-      </tr>
+        {{!-- </td>
+      </tr> --}}
 
 <div class="each-event">
               <tr>
@@ -62,26 +62,29 @@
 
                 </td>
                 <td>
-                  {{bar.barname}}
+                  {{event.bar.barname}}
                 </td>
               </tr>
               </p>
+              
               <p>
                 <tr>
                   <td>
-                    <b>Type of music:</b>
+                    <b>Location:</b>
                   </td>
                   <td>
-                    {{event.musicType}}</td>
+                    {{event.bar.location.coordinates}}
+                  </td>
                 </tr>
               </p>
+
               <p>
                 <tr>
                   <td>
-                    <b>Description:</b>
+                    <b>Phone:</b>
                   </td>
                   <td>
-                    {{event.description}}
+                    {{event.bar.phone}}
                   </td>
                 </tr>
               </p>
