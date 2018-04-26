@@ -26,6 +26,17 @@ router.post('/search', (req, res, next) => {
 
 /* Request maps */
 
+router.get('/', (req, res, next) => {
+  Bar.find({})
+    .then((result) => {
+      const data = {
+        bars: result
+      };
+      res.render('pages/homepage', data);
+    })
+    .catch(next);
+});
+
 router.get('/bars/json', (req, res, next) => {
   Bar.find({})
     .then((result) => {

@@ -52,8 +52,8 @@ function main () {
     .then(response => {
       response.data.forEach((event) => {
         const location = {
-          lat: event.bar.location.coordinates[0],
-          lng: event.bar.location.coordinates[1]
+          lat: event.bar.location.coordinates[1],
+          lng: event.bar.location.coordinates[0]
         };
         addMarker(map, location, event.bar.barname);
       });
@@ -62,7 +62,7 @@ function main () {
   getBarLocation()
     .then((location) => {
       if (location) {
-        addMarker(map, location, 'your location');
+        addMarker(map, location, 'Ironhack');
       }
     });
 }
