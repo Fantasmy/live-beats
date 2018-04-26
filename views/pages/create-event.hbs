@@ -1,60 +1,51 @@
-<h1>Create event</h1>
-<div class="col-md-12" id="details">
-  <table class='table table-hover table-responsive table-bordered'>
-
+<div class="col-md-12" id="main-form">
+  <div class="form">
     <form method="POST" action="/event/create">
-      <tr>
-          <div class="field">
-            <th scope="row">Event name</th>
-            <td><input type="text" name="title" /></td>
-          </div>
-      </tr>
+      <div class="form-group">
+        <label>Event name</label>
+        <input type="text" class="form-control" name="title" />
+      </div>
 
-      <tr>
-        <div class="field">
-          <th scope="row">Type of music</th>
-          <td>
-            <select name='musicType' class='form-control'>
-              <option value='classic'>Classic</option>
-              <option value='jazz'>Jazz</option>
-              <option value='pop'>Pop</option>
-              <option value='rap'>Rap</option>
-              <option value='rock'>Rock</option>
-              <option value='other'>Other</option>
-            </select>
-          </td>
-        </div>
-      </tr>
+      <div class="form-group">
+        <label>Type of music</label>
 
-      <tr>
-        <div class="field">
-          <th scope="row">Description</th>
-          <td>
-            <textarea type="text" name="description"></textarea> </textarea>
-          </td>
-        </div>
-      </tr>
+        <select name='musicType' class='form-control'>
+          <option value='classic'>Classic</option>
+          <option value='jazz'>Jazz</option>
+          <option value='pop'>Pop</option>
+          <option value='rap'>Rap</option>
+          <option value='rock'>Rock</option>
+          <option value='other'>Other</option>
+        </select>
+
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea type="text" class="form-control" name="description"></textarea> </textarea>
+      </div>
+
 
       {{#if errorMessage}}
 
-      <div class="error"> 
+      <div class="error">
         {{errorMessage}}
       </div>
 
       {{/if}}
 
-      <td>
-        <div class="field submit">
-          <td>
-            <button type="submit" class="btn btn-primary">
-              <span class="glyphicon glyphicon"></span>Add event
-            </button>
-          </td>
-        </div>
-      </td>
-    </form>
 
-  </table>
+      <div class="text-center">
+
+        <button type="submit" class="btn btn-primary">
+          <span class="glyphicon glyphicon"></span>Add event
+        </button>
+
+      </div>
+
+    </form>
+  </div>
+
 </div>
 
 <div class="lennie"></div>
