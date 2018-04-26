@@ -27,7 +27,7 @@ function main () {
     marker.setMap(map);
 
     const infowindow = new google.maps.InfoWindow({
-      content: `<div class="mylabel">{{Event}}</div>`
+      content: `<div class="mylabel">${event}</div>`
     });
 
     google.maps.event.addListener(marker, 'click', function () {
@@ -49,7 +49,8 @@ function main () {
             lat: event.bar.location.coordinates[1],
             lng: event.bar.location.coordinates[0]
           };
-          addMarker(map, location, event.bar.barname, event);
+
+          addMarker(map, location, event.bar.barname, JSON.stringify(event));
         });
       });
   }

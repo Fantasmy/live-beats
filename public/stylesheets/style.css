@@ -43,6 +43,12 @@ color: wheat;
   width: 100%;
 }
 
+.form{
+  margin: 0 auto;
+  padding-top: 50px;
+  width:30%;
+}
+
 /* ---- typography ---- */
 
 body {
@@ -136,7 +142,7 @@ button {
 #search{
   background-color: black;
   color: white;
-  height: 50vh;
+  height: 40vh;
 }
 
 #search h1{
@@ -170,38 +176,26 @@ button {
   background-color: #d3cdcd;
 }
 
-.form{
-  margin: 0 auto;
-  padding-top: 50px;
-  width:30%;
-}
-
 .btn-signup{
   padding: 10px 20px;
   font-size: 17px;
-}
-
-.bar-img {
-  z-index: -1;
-  overflow: hidden;
-  left: 70px;
-  position: relative;
-  display: block;
 }
 
 #details {
   padding-top: 50px;
 }
 
-/* ---- components ---- */
+/* ---- MAP ---- */
 
 #map {
   height: 80vh;
+  overflow: scroll;
 }
 
 .mylabel{
   color: black;
 }
+
 /* --- tables --- */
 
 thead {
