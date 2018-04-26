@@ -27,7 +27,7 @@ function main () {
     marker.setMap(map);
 
     const infowindow = new google.maps.InfoWindow({
-      content: `<div class="mylabel">$(event)</div>`
+      content: `<div class="mylabel">${event}</div>`
     });
 
     google.maps.event.addListener(marker, 'click', function () {
@@ -44,16 +44,13 @@ function main () {
 
     axios.post('/search', musicFilter) // sending musicFilter to index.js
       .then((response) => { // response is an object containing headers, config, data etc.
-<<<<<<< HEAD
         response.data.events.forEach((event) => { // here we have to access only the data of the result - events key from index.js
-=======
-        response.data.events.forEach((event) => { // (same events key from index) here we have to access only the data of the result - which is an array of event based on musicFilter
->>>>>>> 0dce0d9bb5491a40765f69b40a9ba64c0f0111b8
           const location = {
             lat: event.bar.location.coordinates[1],
             lng: event.bar.location.coordinates[0]
           };
-          addMarker(map, location, event.bar.barname, event);
+
+          addMarker(map, location, event.bar.barname, JSON.stringify(event));
         });
       });
   }
