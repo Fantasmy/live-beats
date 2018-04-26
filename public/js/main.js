@@ -17,13 +17,23 @@ function main () {
   const map = new google.maps.Map(container, options);
 
   // -- add marker
-  function addMarker (map, location, barname) {
+  function addMarker (map, location, barname, event) {
     const markerOptions = {
       position: location,
       title: barname
     };
+
     const marker = new google.maps.Marker(markerOptions);
     marker.setMap(map);
+
+    const infowindow = new google.maps.InfoWindow({
+      content: `<div class="mylabel">$(event)</div>`
+    });
+
+    google.maps.event.addListener(marker, 'click', function () {
+      infowindow.open(map, marker);
+    });
+
     return marker;
   }
 
@@ -34,12 +44,12 @@ function main () {
 
     axios.post('/search', musicFilter) // sending musicFilter to index.js
       .then((response) => { // response is an object containing headers, config, data etc.
-        response.data.events.forEach((event) => { // here we have to access only the data of the result - which is an array of event based on musicFilter
+        response.data.events.forEach((event) => { // here we have to access only the data of the result - events key from index.js
           const location = {
             lat: event.bar.location.coordinates[1],
             lng: event.bar.location.coordinates[0]
           };
-          addMarker(map, location, event.bar.barname);
+          addMarker(map, location, event.bar.barname, event);
         });
       });
   }

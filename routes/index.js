@@ -15,10 +15,10 @@ router.post('/search', (req, res, next) => {
   Event.find({musicType: searchedMusicType})
     .populate('bar') // populate the bar: ObjectID with actual data
     .then((result) => {
-      const hello = {
+      const data = {
         events: result
       };
-      res.json(hello);
+      res.json(data);
     })
     .catch(next);
 });
