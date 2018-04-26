@@ -14,15 +14,27 @@ router.get('/', function (req, res, next) {
 
 router.post('/search', (req, res, next) => {
   const searchedMusicType = req.body.musicType;
-  Event.find({musicType: searchedMusicType})
+  Event.find({musicType: searchedMusicType}).populate('bar')
     .then((result) => {
       const data = {
-        searchedEvent: result
+        events: result
       };
-      res.render('homepage', data);
+      res.json(data);
     })
     .catch(next);
 });
+
+// router.post('/search', (req, res, next) => {
+//   const searchedMusicType = req.body.musicType;
+//   Event.find({musicType: searchedMusicType})
+//     .then((result) => {
+//       const data = {
+//         searchedEvent: result
+//       };
+//       res.render('homepage', data);
+//     })
+//     .catch(next);
+// });
 
 /* Request maps */
 

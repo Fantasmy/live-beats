@@ -24,12 +24,12 @@
   <h1>Find the good vibes</h1>
   {{!-- form with music values --}}
 
-  <form method="POST" action="/search">
+  {{!-- <form method="POST" action="/search"> --}}
   <tr>
     <div class="field">
       <label><h3>Pick your music taste</h3></label>
         <td>
-          <select name='musicType' class='selectpicker'>
+          <select name='musicType' class='selectpicker' id="selectpicker">
             <option value='classic'>Classic</option>
             <option value='jazz'>Jazz</option>
             <option value='pop'>Pop</option>
@@ -39,13 +39,13 @@
           </select>
         </td>
         <td>
-          <button type="submit" class="btn btn-search">
+          <button type="submit" id="btn-search" class="btn btn-search">
             <span class="glyphicon glyphicon"></span>Search
           </button>
           </td>
     </div>
   </tr>
-</form>
+{{!-- </form> --}}
 
   <div class="searchList">
     
