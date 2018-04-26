@@ -1,7 +1,7 @@
 'use strict';
 
 function main () {
-  const selectElement = document.getElementById('selectpicker');
+  const selectElement = document.getElementById('selectpicker'); // activates function on button click
   const buttonElement = document.querySelector('#btn-search');
 
   // -- build the map and select the default location to be displayed (without marker)
@@ -44,7 +44,11 @@ function main () {
 
     axios.post('/search', musicFilter) // sending musicFilter to index.js
       .then((response) => { // response is an object containing headers, config, data etc.
+<<<<<<< HEAD
         response.data.events.forEach((event) => { // here we have to access only the data of the result - events key from index.js
+=======
+        response.data.events.forEach((event) => { // (same events key from index) here we have to access only the data of the result - which is an array of event based on musicFilter
+>>>>>>> 0dce0d9bb5491a40765f69b40a9ba64c0f0111b8
           const location = {
             lat: event.bar.location.coordinates[1],
             lng: event.bar.location.coordinates[0]
@@ -54,7 +58,7 @@ function main () {
       });
   }
 
-  buttonElement.addEventListener('click', getEvents);
+  buttonElement.addEventListener('click', getEvents); // on click runs getEvents function
 }
 
 window.addEventListener('load', main);

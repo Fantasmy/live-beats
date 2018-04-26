@@ -188,6 +188,11 @@ button {
   position: relative;
   display: block;
 }
+
+#details {
+  padding-top: 50px;
+}
+
 /* ---- components ---- */
 
 #map {
@@ -196,4 +201,30 @@ button {
 
 .mylabel{
   color: black;
+}
+/* --- tables --- */
+
+thead {
+  background-color: grey;
+}
+
+table {
+  width:100%; 
+}
+
+.table td {
+  text-align: left;   
+}
+
+.table th {
+  width: 30%;
+  text-align: right;   
+}
+
+#event-header {
+  text-align: left;
+}
+
+.col-md-8 {
+  
 }
