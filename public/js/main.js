@@ -1,7 +1,10 @@
 'use strict';
 
 function main () {
-  // -- build the map and select the default location to be displayed
+  const selectElement = document.getElementById('selectpicker'); // activates function on button click
+  const buttonElement = document.querySelector('#btn-search');
+
+  // -- build the map and select the default location to be displayed (without marker)
   const defaultLocation = {
     lat: 41.3977381,
     lng: 2.190471916
@@ -24,27 +27,14 @@ function main () {
     return marker;
   }
 
-  // -- show all bars on the map
-  /* axios.get('/bars/json')
-    .then(response => {
-      response.data.forEach((bar) => {
-        const location = {
-          lat: bar.location.coordinates[1],
-          lng: bar.location.coordinates[0]
-        };
-        addMarker(map, location, bar.barname);
-      });
-    }); */
-
   function getEvents () {
-    const musicType = document.getElementById('selectpicker').value;
     const musicFilter = {
-      musicType: musicType
+      musicType: selectElement.value // gets value of picked type
     };
 
-    axios.post('/search', musicFilter)
-      .then((result) => {
-        result.data.events.forEach((event) => {
+    axios.post('/search', musicFilter) // sending musicFilter to index.js
+      .then((response) => { // response is an object containing headers, config, data etc.
+        response.data.events.forEach((event) => { // (same events key from index) here we have to access only the data of the result - which is an array of event based on musicFilter
           const location = {
             lat: event.bar.location.coordinates[1],
             lng: event.bar.location.coordinates[0]
@@ -54,26 +44,19 @@ function main () {
       });
   }
 
-  const buttonElement = document.querySelector('#btn-search');
-  buttonElement.addEventListener('click', getEvents);
+  buttonElement.addEventListener('click', getEvents); // on click runs getEvents function
 }
 
 window.addEventListener('load', main);
 
-// function main () {
-//   console.log('ok');
-
-//   const body = {
-//     musicType: 'pop' // take the input from the select element
-//   };
-//   axios.post('/search', body)
-//     .then((result) => {
-//       console.log(result);
-//       document.body.innerHTML += result.data.searchedEvent[0].title;
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// }
-
-// window.addEventListener('load', main);
+// -- show all bars on the map
+/* axios.get('/bars/json')
+    .then(response => {
+      response.data.forEach((bar) => {
+        const location = {
+          lat: bar.location.coordinates[1],
+          lng: bar.location.coordinates[0]
+        };
+        addMarker(map, location, bar.barname);
+      });
+    }); */
