@@ -1,17 +1,88 @@
-function main () {
-  console.log('ok');
+'use strict';
 
-  const body = {
-    musicType: 'pop' // take the input from the select element
+function main () {
+  // -- utility functions
+
+  function getBarLocation () {
+    return new Promise((resolve, reject) => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          const barPosition = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+          resolve(barPosition);
+        }, () => {
+          resolve();
+          // console.log('Error in the geolocation service.');
+        });
+      } else {
+        resolve();
+        // console.log('Browser does not support geolocation.');
+      }
+    });
+  }
+
+  // -- add marker
+
+  function addMarker (map, location, barname) {
+    const markerOptions = {
+      position: location,
+      title: barname
+    };
+    const marker = new google.maps.Marker(markerOptions);
+    marker.setMap(map);
+    return marker;
+  }
+
+  // -- build the map
+
+  const defaultLocation = {
+    lat: 41.3977381,
+    lng: 2.190471916
   };
-  axios.post('/search', body)
-    .then((result) => {
-      console.log(result);
-      document.body.innerHTML += result.data.searchedEvent[0].title;
-    })
-    .catch((err) => {
-      console.log(err);
+  const container = document.getElementById('map');
+  const options = {
+    zoom: 15,
+    center: defaultLocation
+  };
+  const map = new google.maps.Map(container, options);
+
+  axios.get('/bars/json')
+    .then(response => {
+      response.data.forEach((event) => {
+        const location = {
+          lat: event.bar.location.coordinates[0],
+          lng: event.bar.location.coordinates[1]
+        };
+        addMarker(map, location, event.bar.barname);
+      });
+    });
+
+  getBarLocation()
+    .then((location) => {
+      if (location) {
+        addMarker(map, location, 'your location');
+      }
     });
 }
 
 window.addEventListener('load', main);
+
+// function main () {
+//   console.log('ok');
+
+//   const body = {
+//     musicType: 'pop' // take the input from the select element
+//   };
+//   axios.post('/search', body)
+//     .then((result) => {
+//       console.log(result);
+//       document.body.innerHTML += result.data.searchedEvent[0].title;
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// }
+
+// window.addEventListener('load', main);

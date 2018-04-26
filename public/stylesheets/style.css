@@ -180,3 +180,16 @@ button {
   padding: 10px 20px;
   font-size: 17px;
 }
+
+.bar-img {
+  z-index: -1;
+  overflow: hidden;
+  left: 70px;
+  position: relative;
+  display: block;
+
+/* ---- components ---- */
+
+#map {
+  height: 80vh;
+}
