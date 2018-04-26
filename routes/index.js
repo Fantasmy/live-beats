@@ -3,41 +3,30 @@
 const express = require('express');
 const router = express.Router();
 const Event = require('../models/event');
-const Bar = require('../models/bar');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('homepage');
 });
 
-/* POST search */
-
+/* POST search  - goes to database and find event of searchedMusicType */
 router.post('/search', (req, res, next) => {
   const searchedMusicType = req.body.musicType;
-  Event.find({musicType: searchedMusicType}).populate('bar')
+  Event.find({musicType: searchedMusicType})
+    .populate('bar') // populate the bar: ObjectID with actual data
     .then((result) => {
-      const data = {
+      const hello = {
         events: result
       };
-      res.json(data);
+      res.json(hello);
     })
     .catch(next);
 });
 
-// router.post('/search', (req, res, next) => {
-//   const searchedMusicType = req.body.musicType;
-//   Event.find({musicType: searchedMusicType})
-//     .then((result) => {
-//       const data = {
-//         searchedEvent: result
-//       };
-//       res.render('homepage', data);
-//     })
-//     .catch(next);
-// });
+module.exports = router;
 
-/* Request maps */
-
+// to get all bars from db
+/* const Bar = require('../models/bar');
 router.get('/bars/json', (req, res, next) => {
   Bar.find({})
     .then((result) => {
@@ -45,32 +34,4 @@ router.get('/bars/json', (req, res, next) => {
     })
     .catch(next);
 });
-
-module.exports = router;
-
-// 'use strict';
-
-// const express = require('express');
-// const router = express.Router();
-// const Event = require('../models/event');
-
-// /* GET home page. */
-// router.get('/', function (req, res, next) {
-//   res.render('homepage');
-// });
-
-// /* POST search */
-
-// router.post('/search', (req, res, next) => {
-//   const searchedMusicType = req.body.musicType;
-//   Event.find({musicType: searchedMusicType})
-//     .then((result) => {
-//       const data = {
-//         searchedEvent: result
-//       };
-//       res.render('homepage', data);
-//     })
-//     .catch(next);
-// });
-
-// module.exports = router;
+ */
