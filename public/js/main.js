@@ -31,6 +31,7 @@ function main () {
       <b>Title:</b> ${event[1]} <br>
       <b>Music type:</b> ${event[2]} <br>
       <b>Description:</rabb> ${event[3]}<br>
+      <a href="/event/event-details/${event[0]}">See details</a>
       </div>`
     });
 
