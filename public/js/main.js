@@ -27,7 +27,7 @@ function main () {
     marker.setMap(map);
 
     const infowindow = new google.maps.InfoWindow({
-      content: `<div class="mylabel">$(event)</div>`
+      content: `<div class="mylabel">{{Event}}</div>`
     });
 
     google.maps.event.addListener(marker, 'click', function () {
