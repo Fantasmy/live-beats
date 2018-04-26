@@ -165,7 +165,7 @@ button {
 
 /* sign-up form */
 
-#signup-form{
+#main-form{
   height: 85vh;
   background-color: #d3cdcd;
 }
@@ -187,3 +187,9 @@ button {
   left: 70px;
   position: relative;
   display: block;
+
+/* ---- components ---- */
+
+#map {
+  height: 80vh;
+}
