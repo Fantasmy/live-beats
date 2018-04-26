@@ -3,7 +3,7 @@
 function main () {
   // -- utility functions
 
-  function getBarLocation () {
+  /* function getBarLocation () {
     return new Promise((resolve, reject) => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -21,7 +21,7 @@ function main () {
         // console.log('Browser does not support geolocation.');
       }
     });
-  }
+  } */
 
   // -- add marker
 
@@ -35,8 +35,7 @@ function main () {
     return marker;
   }
 
-  // -- build the map
-
+  // -- build the map and select the default location to be displayed
   const defaultLocation = {
     lat: 41.3977381,
     lng: 2.190471916
@@ -48,23 +47,42 @@ function main () {
   };
   const map = new google.maps.Map(container, options);
 
-  axios.get('/bars/json')
-    .then(response => {
-      response.data.forEach((event) => {
-        const location = {
-          lat: event.bar.location.coordinates[1],
-          lng: event.bar.location.coordinates[0]
-        };
-        addMarker(map, location, event.bar.barname);
-      });
-    });
+  // -- show searched bars by type music
 
-  getBarLocation()
+  function main () {
+    console.log('ok');
+
+    const body = {
+      musicType: 'pop' // take the input from the select element
+    };
+    axios.post('/search', body)
+      .then((result) => {
+        console.log(result);
+        document.body.innerHTML += result.data.searchedEvent[0].title;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  // -- show all bars on the map
+  // axios.get('/bars/json')
+  //   .then(response => {
+  //     response.data.forEach((bar) => {
+  //       const location = {
+  //         lat: bar.location.coordinates[1],
+  //         lng: bar.location.coordinates[0]
+  //       };
+  //       addMarker(map, location, bar.barname);
+  //     });
+  //   });
+
+  /* getBarLocation()
     .then((location) => {
       if (location) {
         addMarker(map, location, 'Ironhack');
       }
-    });
+    }); */
 }
 
 window.addEventListener('load', main);
