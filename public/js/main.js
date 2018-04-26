@@ -44,7 +44,11 @@ function main () {
 
     axios.post('/search', musicFilter) // sending musicFilter to index.js
       .then((response) => { // response is an object containing headers, config, data etc.
+<<<<<<< HEAD
         response.data.events.forEach((event) => { // here we have to access only the data of the result - events key from index.js
+=======
+        response.data.events.forEach((event) => { // (same events key from index) here we have to access only the data of the result - which is an array of event based on musicFilter
+>>>>>>> cc26591e8bdc693174ad334a8e5ac4b1b9660cda
           const location = {
             lat: event.bar.location.coordinates[1],
             lng: event.bar.location.coordinates[0]
