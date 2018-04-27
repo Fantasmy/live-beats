@@ -198,9 +198,14 @@ button {
 
 .mylabel{
  color: black;
+<<<<<<< HEAD
  padding:20px;
  font-size: 17px;
 
+=======
+ padding: 20px;
+ font-size: 17px;
+>>>>>>> 0c70fdb0153d4d9d4a840630fb791be3b34213e5
 }
 
 /* --- tables --- */
@@ -226,6 +231,11 @@ tr {
 
 th{
   width: 30%;
+}
+
+.events {
+  background-color: #808080;
+  text-align: center;
 }
 
 /*  create event */
@@ -299,6 +309,7 @@ color: black!important;
   width: 100%!important;
 }
 
+<<<<<<< HEAD
 .each-event{
   margin-bottom: 30px;
 }
@@ -306,3 +317,9 @@ color: black!important;
 .do-not{
   font-size: 17px!important;
 }
+=======
+.do-not{
+  font-size: 17px!important;
+ }
+ 
+>>>>>>> 0c70fdb0153d4d9d4a840630fb791be3b34213e5
