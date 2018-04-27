@@ -1,16 +1,9 @@
   <div id="img-events">
-<body class="events-page">
-    <div class="col-md-8">
+    <div class="container">
+      <div class="text-center text-list">
+      <h1> List of Events </h1>
+      </div>
       <table class='table table-hover table-responsive table-bordered' align="center">
-
-        <thead class="thead-dark">
-          <div class="events">
-            {{!--
-            <tr> --}}
-              <h1> List of Events </h1>
-              {{!-- </tr> --}}
-          </div>
-        </thead>
         <tbody>
           <ul>
             {{#each events}} {{!-- key from event.js --}}
@@ -37,9 +30,11 @@
 
 
               <tr>
-                <th scope="row"><td>
+                  <div id="see-details">
+                <th scope="row">
                   <a href="/event/event-details/{{this._id}}">See details</a>
-                </th></td>
+                </th>
+                  </div>
               </tr>
 
               {{!-- <tr>
