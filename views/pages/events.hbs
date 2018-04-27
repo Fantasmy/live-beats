@@ -1,17 +1,24 @@
-<body class="events-page">
   <div id="img-events">
+<body class="events-page">
     <div class="col-md-8">
       <table class='table table-hover table-responsive table-bordered' align="center">
 
         <thead class="thead-dark">
-          {{!-- <tr> --}}
-            <h1> List of Events </h1>
-          {{!-- </tr> --}}
+          <div class="events">
+            {{!--
+            <tr> --}}
+              <h1> List of Events </h1>
+              {{!-- </tr> --}}
+          </div>
         </thead>
         <tbody>
           <ul>
             {{#each events}} {{!-- key from event.js --}}
-          <thead><tr><th id="event-header" colspan="4" scope="colgroup">Event info</th></tr></thead>
+            <thead>
+              <tr>
+                <th id="event-header" colspan="4" scope="colgroup">Event info</th>
+              </tr>
+            </thead>
             <div class="each-event">
               <tr>
                 <th scope="row">Title</th>
@@ -28,11 +35,18 @@
                 <td>{{this.description}}</td>
               </tr>
 
+
               <tr>
-                <th scope="row">
+                <th scope="row"><td>
                   <a href="/event/event-details/{{this._id}}">See details</a>
-                </th>
+                </th></td>
               </tr>
+
+              {{!-- <tr>
+                <th scope="row"><td>
+                  <a href="/event/event-details/{{this._id}}">See details</a>
+                </th></td>
+              </tr> --}}
 
             </div>
 
@@ -42,7 +56,7 @@
       </table>
 
     </div>
-    </div>
 </body>
+  </div>
 
 <div class="lennie"></div>

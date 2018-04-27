@@ -1,32 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Cute+Font|Roboto|Jua');
+@import url('https://fonts.googleapis.com/css?family=Cute+Font%7CRoboto%7CJua');
 
 /* ---- reset ---- */
 
 html {
-  box-sizing: border-box;
+ box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+*,* :before, *:after {
+ box-sizing: inherit;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+ margin: 0;
+ padding: 0;
 }
 
 /* Cross-page styling */
 .lennie{
-  clear: both;
+ clear: both;
 }
+
 .btn{
-  background-color: #4FCECC;
-  font-family: 'Jua', sans-serif;
-  color: black;
+ background-color: #4FCECC;
+ font-family: 'Jua', sans-serif;
+ color: black;
 }
 
 .btn a{
 color: black;
-
 }
 
 .btn:hover a{
@@ -34,234 +34,261 @@ text-decoration: none;
 color: wheat;
 }
 
-.error-message {
-  background: orangered;
-  box-sizing: border-box;
-  color: #fff;
-  margin: 20px auto;
-  padding: 20px;
-  width: 100%;
+.error {
+ background: orangered;
+ box-sizing: border-box;
+ color: #fff;
+ margin: 20px auto;
+ padding: 10px;
+ width: 100%;
+ text-align: center;
 }
 
 .form{
-  margin: 0 auto;
-  padding-top: 50px;
-  width:30%;
+ margin: 0 auto;
+ margin-top: 40px;
+ padding: 50px;
+ width:30%;
+ background-color: #282626;
+ color:white;
 }
 
 /* ---- typography ---- */
 
 body {
-  color: #111;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 147%;
+ color: #111;
+ font-family: Helvetica, Arial, sans-serif;
+ font-size: 16px;
+ line-height: 147%;
 }
 
 /* ---- layout ---- */
 .navbar{
-  padding: 0;
-  margin: 0;
-  border-radius: 0%;
-  font-size:1.3em;
-  background-color: black;
+ padding: 0;
+ margin: 0;
+ border-radius: 0%;
+ font-size:1.3em;
+ background-color: black;
 }
 
 .container-fluid {
-  padding: 10px 20px;
-  margin: 0;
+ padding: 10px 20px;
+ margin: 0;
 }
 
 .header-barname{
-  color: goldenrod!important;
+ color: goldenrod!important;
 }
 
 .navbar-brand {
-  font-family: 'Cute Font', cursive;
-  font-size: 30px;
-  color: #4FCECC!important;
+ font-family: 'Cute Font', cursive;
+ font-size: 30px;
+ color: #4FCECC!important;
 }
 
 .logo {
-  width: 70px;
-  height: 50px;
+ width: 70px;
+ height: 50px;
 }
 
 button {
-  border: none;
-  background: none;  
+ border: none;
+ background: none;  
 }
 
-.footer { 
-  background-color: black;
-  color: #ffffff;
+.footer {
+ background-color: black;
+ color: #ffffff;
 }
 
-/* --- homepage --- */ 
+/* --- homepage --- */
 
-.jumbotron { 
-  background: url("../images/background.jpg") no-repeat center;
-  background-size: cover;
-  height: 100vh;
-  color: black;
-  margin: 0;
+.jumbotron {
+ background: url("../images/background.jpg") no-repeat center;
+ background-size: cover;
+ height: 100vh;
+ color: black;
+ margin: 0;
 }
 
 .jumbotron-text{
-  margin: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 80px;
-  font-family: 'Jua', sans-serif;
-  color: wheat!important;
-  text-shadow: 2px 2px black;
-  display: inline-block;
-  text-align: center;
+ margin: 20px;
+ padding-top: 30px;
+ padding-bottom: 30px;
+ padding-left: 80px;
+ font-family: 'Jua', sans-serif;
+ color: wheat!important;
+ text-shadow: 2px 2px black;
+ display: inline-block;
+ text-align: center;
 }
 
 .jumbotron-text h1{
-  font-size: 70px;
-  margin-bottom: 40px;
+ font-size: 70px;
+ margin-bottom: 40px;
 }
 
 .capital{
-  font-size: 90px;
+ font-size: 90px;
 }
 
 .jumbotron-text h3{
-  font-size: 30px;
-  margin-bottom: 40px;
+ font-size: 30px;
+ margin-bottom: 40px;
 }
 
 .btn-info{
-  background-color: #4FCECC;
-  padding: 20px;
-  font-size: 20px;
+ background-color: #4FCECC;
+ padding: 20px;
+ font-size: 20px;
 }
 
 #search{
-  background-color: black;
-  color: white;
-  height: 40vh;
+ background-color: black;
+ color: white;
+ height: 40vh;
 }
 
 #search h1{
-  padding-top: 60px;
-  padding-bottom: 40px;
-  margin: 0;
-  font-family: 'Jua', sans-serif;
-  color: wheat!important;
+ padding-top: 60px;
+ padding-bottom: 40px;
+ margin: 0;
+ font-family: 'Jua', sans-serif;
+ color: wheat!important;
 }
 
 #search label{
-  font-family: 'Jua', sans-serif;
-  color: wheat!important;
-  padding-right: 20px;
+ font-family: 'Jua', sans-serif;
+ color: wheat!important;
+ padding-right: 20px;
 }
 
 .selectpicker{
-  color: black;
-  height: 33px;
-  width: 100px;
+ color: black;
+ height: 33px;
+ width: 100px;
 }
 
+/* event details */
+
 #details {
-  height: 85vh;
+ height: 85vh;
 }
 
 /* sign-up form */
 
 #main-form{
-  height: 85vh;
-  background-color: #d3cdcd;
-  opacity: 0.5;
+ height: 85vh;
+ font-size: 1.4em;
 }
 
 .btn-signup{
-  padding: 10px 20px;
-  font-size: 17px;
+ padding: 10px 20px;
+ font-size: 17px;
 }
 
 #details {
-  padding-top: 50px;
+ padding-top: 50px;
 }
 
 /* ---- MAP ---- */
 
 #map {
-  height: 80vh;
-  overflow: scroll;
+ height: 80vh;
+ overflow: scroll;
 }
 
 .mylabel{
-  color: black;
+ color: black;
 }
 
 /* --- tables --- */
 
 #event-header {
-  background-color: grey;
+ background-color: grey;
 }
 
 table {
-  width:100%; 
+ width:100%; 
 }
 
 tr {
-  background-color: black;
-  color: white;
+ background-color: black;
+ color: white;
 }
 
 .table td {
-  text-align: left;   
+ text-align: left;  
 }
 
 .table th {
-  width: 30%;
-  text-align: right;   
+ width: 30%;
+ text-align: right;  
 }
 
 #event-header {
-  text-align: left;
+ text-align: left;
 }
 
-.col-md-8 {
-  
+.events {
+  background-color: #808080;
+  text-align: center;
 }
 
+/*  create event */
+
+.btn-add{
+ padding: 10px 20px;
+ font-size: 17px;
+}
 /* Images */
 
 #img-log{
-  background: url("../images/login.jpg") no-repeat center;
-  background-size: cover;
-  height: 100vh;
-  color: black;
-  margin: 0;
+ background: url("../images/login-opacity.png") no-repeat center;
+ background-size: cover;
+ height: 100vh;
+ color: black;
+ margin: 0;
 }
 
 #img-sign {
-  background: url("../images/signup.jpg") no-repeat center;
-  background-size: cover;
-  height: 100vh;
-  color: black;
-  margin: 0;
+ background: url("../images/signup-opacity.png") no-repeat center;
+ background-size: cover;
+ height: 100vh;
+ color: black;
+ margin: 0;
 }
 
 #img-events {
-  background: url("../images/events.jpg") repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
-  color: black;
-  margin: 0;
-  opacity: 0.5;
+ background: url("../images/events.jpg") no-repeat center center fixed;
+ /* background-size: cover;
+ background-position: top center;
+ height: 100vh;
+ color: black;
+ margin: 0; */
+ background-size: cover;
+ width: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
 }
 
 #img-details {
-  background: url("../images/details.jpg") no-repeat center;
-  background-size: cover;
-  height: 100vh;
-  color: black;
-  margin: 0;
-  opacity: 0.5;
+ background: url("../images/details-opacity.png") no-repeat center;
+ background-size: cover;
+ /* height: 100vh; */
+ color: black;
+ margin: 0;
 }
 
+#img-create {
+ background: url("../images/create-event-opacity.png") no-repeat center;
+ background-size: cover;
+ height: 100vh;
+ color: black;
+ margin: 0;
+}
+
+#th large {
+  width: 100%;
+}

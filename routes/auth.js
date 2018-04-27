@@ -23,7 +23,7 @@ router.post('/signup', (req, res, next) => {
 
   if (barname === '' || password === '' || phone === '' || lng === '' || lat === '') {
     res.render('auth/signup', {
-      errorMessage: 'You are missing stuff'
+      errorMessage: 'All fields required!'
     });
     return;
   }
@@ -32,7 +32,7 @@ router.post('/signup', (req, res, next) => {
     .then(result => {
       if (result) {
         res.render('auth/signup', {
-          errorMessage: 'Sorry, barname is taken'
+          errorMessage: 'Sorry, your bar already exists ;)'
         });
         return;
       }
