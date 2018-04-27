@@ -35,20 +35,13 @@ router.post('/create', (req, res, next) => {
 
   if (title === '' || musicType === '') {
     res.render('pages/create-event', {
-      errorMessage: 'You are missing stuff'
+      errorMessage: 'All fields required!'
     });
     return;
   }
 
   Event.findOne({ title: title })
     .then(result => {
-      if (result) {
-        res.render('pages/create-event', {
-          errorMessage: 'Sorry, the name of the event already exist'
-        });
-        return;
-      }
-
       const event = new Event({
         title,
         musicType,

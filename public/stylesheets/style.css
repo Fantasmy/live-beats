@@ -18,6 +18,7 @@ body {
 .lennie{
  clear: both;
 }
+
 .btn{
  background-color: #4FCECC;
  font-family: 'Jua', sans-serif;
@@ -26,7 +27,6 @@ body {
 
 .btn a{
 color: black;
-
 }
 
 .btn:hover a{
@@ -34,19 +34,23 @@ text-decoration: none;
 color: wheat;
 }
 
-.error-message {
+.error {
  background: orangered;
  box-sizing: border-box;
  color: #fff;
  margin: 20px auto;
- padding: 20px;
+ padding: 10px;
  width: 100%;
+ text-align: center;
 }
 
 .form{
  margin: 0 auto;
- padding-top: 50px;
+ margin-top: 40px;
+ padding: 50px;
  width:30%;
+ background-color: #282626;
+ color:white;
 }
 
 /* ---- typography ---- */
@@ -165,6 +169,8 @@ button {
  width: 100px;
 }
 
+/* event details */
+
 #details {
  height: 85vh;
 }
@@ -173,8 +179,7 @@ button {
 
 #main-form{
  height: 85vh;
- background-color: #d3cdcd;
- opacity: 0.5;
+ font-size: 1.4em;
 }
 
 .btn-signup{
@@ -225,14 +230,16 @@ tr {
  text-align: left;
 }
 
-.col-md-8 {
- 
-}
+/*  create event */
 
+.btn-add{
+ padding: 10px 20px;
+ font-size: 17px;
+}
 /* Images */
 
 #img-log{
- background: url("../images/login.jpg") no-repeat center;
+ background: url("../images/login-opacity.png") no-repeat center;
  background-size: cover;
  height: 100vh;
  color: black;
@@ -240,7 +247,7 @@ tr {
 }
 
 #img-sign {
- background: url("../images/signup.jpg") no-repeat center;
+ background: url("../images/signup-opacity.png") no-repeat center;
  background-size: cover;
  height: 100vh;
  color: black;
@@ -257,10 +264,17 @@ tr {
 }
 
 #img-details {
- background: url("../images/details.jpg") no-repeat center;
+ background: url("../images/details-opacity.png") no-repeat center;
  background-size: cover;
  height: 100vh;
  color: black;
  margin: 0;
- opacity: 0.5;
+}
+
+#img-create {
+ background: url("../images/create-event-opacity.png") no-repeat center;
+ background-size: cover;
+ height: 100vh;
+ color: black;
+ margin: 0;
 }
