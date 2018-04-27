@@ -187,9 +187,6 @@ button {
  font-size: 17px;
 }
 
-#details {
- padding-top: 50px;
-}
 
 /* ---- MAP ---- */
 
@@ -205,29 +202,25 @@ button {
 /* --- tables --- */
 
 #event-header {
- background-color: grey;
-}
-
-table {
- width:100%; 
-}
-
-tr {
  background-color: black;
+ text-align: center;
  color: white;
 }
 
-.table td {
- text-align: left;  
+table {
+  border-radius: 5px;
+  width: 50%!important;
+  float: none;
+  margin: 0px auto
 }
 
-.table th {
- width: 30%;
- text-align: right;  
+tr {
+ background-color: white;
+ color: black;
 }
 
-#event-header {
- text-align: left;
+th{
+  width: 30%;
 }
 
 /*  create event */
@@ -255,12 +248,11 @@ tr {
 }
 
 #img-events {
- background: url("../images/events.jpg") no-repeat center;
+ background: url("../images/list-opacity.png") no-repeat center;
  background-size: cover;
  height: 100vh;
  color: black;
  margin: 0;
- opacity: 0.5;
 }
 
 #img-details {
@@ -277,4 +269,27 @@ tr {
  height: 100vh;
  color: black;
  margin: 0;
+}
+
+/* event details */
+#details {
+ padding-top: 50px;
+}
+
+.todo{
+ background: orangered;
+ box-sizing: border-box;
+ color: #fff;
+ margin: 20px auto;
+ padding: 10px;
+ width: 40%;
+}
+
+.text-list{
+font-family: 'Jua', sans-serif;
+color: black!important;
+}
+
+#see-details{
+  width: 100%!important;
 }
