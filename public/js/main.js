@@ -1,4 +1,3 @@
-'use strict';
 
 function main () {
   const selectElement = document.getElementById('selectpicker'); // activates function on button click
@@ -30,7 +29,7 @@ function main () {
       content: `<div class="mylabel"> 
       <b>Title:</b> ${event[1]} <br>
       <b>Music type:</b> ${event[2]} <br>
-      <b>Description:</rabb> ${event[3]}<br>
+      <b>Description:</b> ${event[3]}<br>
       <a href="/event/event-details/${event[0]}">See details</a>
       </div>`
     });
